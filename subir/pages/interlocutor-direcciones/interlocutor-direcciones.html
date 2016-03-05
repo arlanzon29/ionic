@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Contactos {{interlocutor.CardName}}</ion-title>
+</ion-navbar>
+
+<ion-content>
+<ion-label fixed>Destinatario Factura</ion-label>
+ <ion-list>
+    <button ion-item *ngFor="#dir of dirFacturacion" (click)="abrirDireccion($event, dir)">
+      {{dir.Adress}}
+    </button>
+  </ion-list>
+	<ion-label fixed>Destinatario</ion-label>
+   <ion-list>
+    <button ion-item *ngFor="#dir of dirEnvio" (click)="abrirDireccion($event, dir)">
+      {{dir.Adress}}
+    </button>
+  </ion-list>
+</ion-content>

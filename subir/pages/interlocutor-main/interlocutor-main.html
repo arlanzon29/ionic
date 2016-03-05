@@ -1,0 +1,29 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Interlocutor</ion-title>
+</ion-navbar>
+
+<ion-content>
+<ion-item>
+	<ion-label floating>Código</ion-label>
+	<ion-input type="text" value="{{interlocutor.CardCode}}"></ion-input> 
+</ion-item>
+<ion-item>
+	<ion-label floating>Descripción</ion-label>
+	<ion-input type="text" value="{{interlocutor.CardName}}"></ion-input> 
+</ion-item>
+
+<ion-list >
+  <button ion-item (click)="datosGenerales($event, interlocutor)">
+    Datos Generales
+  </button>
+  <button ion-item (click)="personasContacto($event, interlocutor)">
+    Personas de Contacto
+  </button>
+  <button ion-item (click)="direcciones($event, interlocutor)">
+    Direcciones
+  </button>  
+</ion-list>
+</ion-content>

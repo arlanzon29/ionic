@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Interlocutores</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+
+  <input type="text" placeholder="Buscar" size="32">
+ <ion-list>
+    <button ion-item *ngFor="#inter of interlocutores" (click)="itemTapped($event, inter)">
+      {{inter.CardCode}}
+      <div class="item-note" item-right>
+        {{inter.CardName}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

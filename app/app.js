@@ -13,6 +13,7 @@ class MyApp {
   static get parameters() {
     return [[IonicApp], [Platform]];
   }
+  
 
   constructor(app, platform) {
     // set up our app
