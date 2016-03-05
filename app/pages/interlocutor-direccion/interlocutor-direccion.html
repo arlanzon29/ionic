@@ -1,0 +1,33 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Dirección</ion-title>
+</ion-navbar>
+
+<ion-content>
+	<ion-item>
+		<ion-label floating>ID de direccion</ion-label>
+		<ion-input type="text" value="{{direccion.Adress}}"></ion-input> 
+	</ion-item>
+	<ion-item>
+		<ion-label floating>Calle/ Apartado de Correos</ion-label>
+		<ion-input type="text" value="{{direccion.Street}}"></ion-input> 
+	</ion-item>
+	<ion-item>
+		<ion-label floating>Bloque</ion-label>
+		<ion-input type="text" value="{{direccion.Block}}"></ion-input> 
+	</ion-item>
+	<ion-item>
+		<ion-label floating>Ciudad</ion-label>
+		<ion-input type="text" value="{{direccion.City}}"></ion-input> 
+	</ion-item>
+	<ion-item>
+		<ion-label floating>Código Postal</ion-label>
+		<ion-input type="text" value="{{direccion.ZipCode}}"></ion-input> 
+	</ion-item>
+	<ion-item>
+		<ion-label floating>Provincia</ion-label>
+		<ion-input type="text" value="{{direccion.County}}"></ion-input> 
+	</ion-item>	
+</ion-content>
