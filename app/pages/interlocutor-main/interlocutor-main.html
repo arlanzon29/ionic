@@ -6,13 +6,15 @@
 </ion-navbar>
 
 <ion-content>
+<ion-form>
 <ion-item>
 	<ion-label floating>Código</ion-label>
-	<ion-input type="text" value="{{interlocutor.CardCode}}"></ion-input> 
+	<ion-input type="text"  [(ngModel)]="interlocutor.CardCode"></ion-input>
 </ion-item>
+
 <ion-item>
-	<ion-label floating>Descripción</ion-label>
-	<ion-input type="text" value="{{interlocutor.CardName}}"></ion-input> 
+  <ion-label floating>Código</ion-label>
+  <ion-input type="text"  [(ngModel)]="interlocutor.CardName"></ion-input>
 </ion-item>
 
 <ion-list >
@@ -26,4 +28,5 @@
     Direcciones
   </button>  
 </ion-list>
+</ion-form>
 </ion-content>

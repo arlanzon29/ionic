@@ -8,10 +8,10 @@
 <ion-content>
 	<ion-item>
 		<ion-label floating>CIF</ion-label>
-		<ion-input type="text" value="{{interlocutor.LicTradNum}}"></ion-input> 
+		<ion-input type="text" [(ngModel)]="interlocutor.LicTradNum"></ion-input> 
 	</ion-item>
 	<ion-item>
 		<ion-label floating>Nombre Extranjero</ion-label>
-		<ion-input type="text" value="{{interlocutor.CardFName}}"></ion-input> 
+		<ion-input type="text" [(ngModel)]="interlocutor.CardFName"></ion-input> 
 	</ion-item>	
 </ion-content>

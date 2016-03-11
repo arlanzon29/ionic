@@ -1,14 +1,16 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar >
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title>Interlocutores</ion-title>
+  <button (click)="save()">
+    <ion-icon name="share" ></ion-icon>
+  </button>
 </ion-navbar>
 
 
 <ion-content padding class="getting-started">
 
-  <input type="text" placeholder="Buscar" size="32">
  <ion-list>
     <button ion-item *ngFor="#inter of interlocutores" (click)="itemTapped($event, inter)">
       {{inter.CardCode}}

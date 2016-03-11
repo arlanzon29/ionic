@@ -2,6 +2,7 @@ import {App, IonicApp, Platform} from 'ionic-angular';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
 import {InterlocutoresPage} from './pages/interlocutores/interlocutores';
+import {ConfiguracionPage} from './pages/configuracion/configuracion';
 
 
 
@@ -25,7 +26,8 @@ class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title:'Interlocutores',component:InterlocutoresPage}
+      { title:'Interlocutores',component:InterlocutoresPage},
+        { title:'Configuración',component:ConfiguracionPage}
     ];
 
     // make HelloIonicPage the root (or first) page
