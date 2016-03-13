@@ -24,8 +24,8 @@ class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
+      { title: 'Bienvenida', component: HelloIonicPage },
+      { title: 'Lista Tutorial', component: ListPage },
       { title:'Interlocutores',component:InterlocutoresPage},
         { title:'Configuración',component:ConfiguracionPage}
     ];

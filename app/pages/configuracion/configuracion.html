@@ -3,11 +3,23 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Hello Ionic</ion-title>
+  <ion-title>Hello Ionic2</ion-title>
 </ion-navbar>
 
 
 <ion-content padding >
-<button (click)="iniciar()">Iniciar Tablas</button>
+<button (click)="iniciar()" class="button-block" danger>Iniciar Tablas</button>
+<br>
+<h3>Actualizar Desde Google Drive</h3>
+<ion-item>
+  <ion-label floating>Password</ion-label>
+  <ion-input type="password"  [(ngModel)]="password"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Almacenar password</ion-label>
+  <ion-checkbox dark [(ngModel)]="savePassword"></ion-checkbox>
+</ion-item>
+<br>
+<button (click)="googleDrive()" class="button-block">Desde Google Drive</button>
 
 </ion-content>

@@ -12,11 +12,16 @@ export class InterlocutoresPage  {
 
  constructor(nav, navParams) {
     this.nav = nav;
+    this.searchQuery=""
 
+    this.initializeItems();    
+  }
+
+  initializeItems(){
     var inter=window.localStorage.getItem("interlocutores")
 
     if (!inter){
-           	alert("Vaya a configuracion e inice las tablas")
+            alert("Vaya a configuracion e inice las tablas")
                                  
     }else{
       this.interlocutores=JSON.parse(inter);
@@ -35,4 +40,25 @@ export class InterlocutoresPage  {
     alert("Interlocutores Guardados")
   }
    
+  getItems(searchbar) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set q to the value of the searchbar
+    var q = searchbar.value;
+
+    // if the value is an empty string don't filter the items
+    if (q.trim() == '') {
+      return;
+    }
+
+    this.interlocutores = this.interlocutores.filter((v) => {
+      if (v.CardName.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+        return true;
+      }
+      return false;
+    })
+
+    var k=1;
+  }
 }

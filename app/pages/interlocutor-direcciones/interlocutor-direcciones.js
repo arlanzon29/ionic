@@ -18,11 +18,11 @@ export class InterlocutorDireccionesPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.interlocutor = navParams.get('interlocutor');
 
-    for (var i=0 ;i< this.interlocutor.CRD1.length;i++){
-    		if (this.interlocutor.CRD1[i].AdresType=='B'){
-    			this.dirFacturacion.push(this.interlocutor.CRD1[i]);
+    for (var i=0 ;i< this.interlocutor.crd1.length;i++){
+    		if (this.interlocutor.crd1[i].AdresType=='B'){
+    			this.dirFacturacion.push(this.interlocutor.crd1[i]);
     		}else{
-				this.dirEnvio.push(this.interlocutor.CRD1[i]);
+				this.dirEnvio.push(this.interlocutor.crd1[i]);
     		}
     }
   }

@@ -3,14 +3,14 @@
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title>Interlocutores</ion-title>
-  <button (click)="save()">
+  <button  item-right (click)="save()">
     <ion-icon name="share" ></ion-icon>
   </button>
 </ion-navbar>
 
 
 <ion-content padding class="getting-started">
-
+<ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
  <ion-list>
     <button ion-item *ngFor="#inter of interlocutores" (click)="itemTapped($event, inter)">
       {{inter.CardCode}}
