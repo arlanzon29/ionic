@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Artículos</ion-title>
+</ion-navbar>
+
+<ion-content>
+<ion-form>
+<ion-item>
+	<ion-label floating>Código</ion-label>
+	<ion-input type="text"  [(ngModel)]="item.ItemCode"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Descripción</ion-label>
+  <ion-input type="text"  [(ngModel)]="item.ItemName"></ion-input>
+</ion-item>
+
+</ion-form>
+</ion-content>

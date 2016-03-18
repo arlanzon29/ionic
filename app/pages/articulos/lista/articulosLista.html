@@ -1,0 +1,20 @@
+<ion-navbar *navbar >
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Artículos</ion-title>
+</ion-navbar>
+
+
+
+<ion-content padding class="getting-started">
+<ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+ <ion-list>
+    <button ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
+      {{item.ItemCode}}
+      <div class="item-note" item-right>
+        {{item.ItemName}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

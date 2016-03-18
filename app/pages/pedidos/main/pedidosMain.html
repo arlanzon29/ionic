@@ -1,0 +1,25 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Pedidos</ion-title>
+</ion-navbar>
+
+<ion-content>
+<ion-form>
+<ion-item>
+	<ion-label floating>Número Pedido</ion-label>
+	<ion-input type="text"  [(ngModel)]="order.Docnum"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Cliente</ion-label>
+  <ion-input type="text"  [(ngModel)]="order.CardCode"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Razón Social</ion-label>
+  <ion-input type="text"  [(ngModel)]="order.CardName"></ion-input>
+</ion-item>
+
+</ion-form>
+</ion-content>

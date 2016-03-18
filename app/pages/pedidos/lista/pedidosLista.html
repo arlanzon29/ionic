@@ -1,0 +1,29 @@
+<ion-navbar *navbar >
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Pedidos</ion-title>
+
+<ion-buttons end>
+
+    <button outline item-right danger (click)="addNew($event)">
+      <ion-icon name="add" ></ion-icon>
+      Añadir
+    </button>
+
+    </ion-buttons>
+</ion-navbar>
+
+
+
+<ion-content padding class="getting-started">
+<ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+ <ion-list>
+    <button ion-item *ngFor="#order of orders" (click)="itemTapped($event, order)">
+      {{order.Docnum}}
+      <div class="item-note" item-right>
+        {{order.CardName}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>
