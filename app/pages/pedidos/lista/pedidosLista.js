@@ -12,6 +12,7 @@ export class PedidosListaPage  {
     return [[NavController], [NavParams],[MaestrosServices]];
   }
 
+
  constructor(nav, navParams,maestros) {
     this.nav = nav;
     this.maestros=maestros;

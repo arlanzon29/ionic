@@ -9,16 +9,20 @@
 <ion-form>
 <ion-item>
 	<ion-label floating>Número Pedido</ion-label>
-	<ion-input type="text"  [(ngModel)]="order.Docnum"></ion-input>
+	<ion-input type="text"  [(ngModel)]="order.Docnum" ></ion-input>
+</ion-item>
+<ion-item >
+
+  <ion-label floating>Cliente</ion-label>
+   <ion-input type="text"  [(ngModel)]="order.CardCode" (blur)="validateTest($event, 'blur')"  (focus)="validateTest($event, 'focus')" (input)="validateTest($event, 'input')" (click)="validateTest($event, 'click')"></ion-input>
+
 </ion-item>
 
-<ion-item>
-  <ion-label floating>Cliente</ion-label>
-  <ion-input type="text"  [(ngModel)]="order.CardCode"></ion-input>
-</ion-item>
+
+
 <ion-item>
   <ion-label floating>Razón Social</ion-label>
-  <ion-input type="text"  [(ngModel)]="order.CardName"></ion-input>
+  <ion-input type="text"  [(ngModel)]="order.CardName" (focus)="validateTest($event, 'CardCode')"></ion-input>
 </ion-item>
 
 </ion-form>

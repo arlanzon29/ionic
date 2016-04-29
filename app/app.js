@@ -26,6 +26,7 @@ class MyApp {
     this.maestros=maestros;
 
     this.maestros.readDataBase();
+    
     this.initializeApp();
 
     
